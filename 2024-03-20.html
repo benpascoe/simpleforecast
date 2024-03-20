@@ -1,0 +1,299 @@
+<meta charset=UTF-8><style>body {
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                line-height: 1.42857143;
+                color: #333;
+                background-color: #fff;
+                padding-bottom: 20px;
+                margin-bottom: 60px;
+            }
+            .container {
+                margin-right: auto;
+                margin-left: auto;
+                padding-left: 15px;
+                padding-right: 15px
+            }
+            footer {
+                text-align: center;
+            }
+            @media (min-width: 768px) {
+                .container {
+                    margin: none;
+                }
+            }
+            @media (min-width: 992px) {
+                .container {
+                    width:970px
+                }
+            }
+            @media (min-width: 1200px) {
+                .container {
+                    width:1170px
+                }
+            }
+            table {
+                border-collapse: collapse;
+                min-width: 400px;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            thead tr {
+                text-align: center;
+            }
+            th, td {
+                padding: 12px 15px;
+            }
+            tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+            tbody tr:last-of-type {
+                border-bottom: 2px solid #5bc0be;
+            }
+            tr td:nth-child(3n+4) {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            tr td:nth-child(12) {
+                font-size: 0.75em;
+            }
+            .fc tr td:nth-child(2) {
+                font-size: 1.25em;
+                background-color: #f6f6f6;
+            }
+            tr td:nth-child(3) {
+                font-size: 1.25em;
+                background-color: #f6f6f6;
+            }
+            tr td:nth-child(4) {
+                font-size: 1.25em;
+                background-color: #f6f6f6;
+            }
+            tr td:first-of-type {
+                font-weight: bold;
+            }
+            .graph tr td:first-of-type {
+                font-weight: normal;
+            }
+            tr td.orange {
+                background-color: #e67e22;
+                color: #fff;
+            }
+            tr td.red {
+                background-color: #e74c3c;
+                color: #fff;
+            }
+            tr td.green {
+                background-color: #27ae60;
+                color: #fff;
+            }
+            tr td i.orange {
+                color: #e67e22;
+            }
+            tr td i.red {
+                color: #e74c3c;
+            }
+            tr td i.green {
+                color: #27ae60;
+            }
+            td.night {
+                background-color: #444;
+                color: #fff;
+            }
+            .graph td.night {
+                background-color: #555;
+                color: #000;
+            }
+            .graph td div {
+                bottom: -25px;
+                position: absolute;
+            }
+            .graph td i {
+                bottom: -43px;
+                position: absolute;
+                font-style: normal;
+                left: 0px;
+            }
+            td.twilight {
+                background-color: #999;
+            }
+            .outer {
+                // overflow: auto;
+                // height: 500px;
+                clear: left;
+            }
+            .outer th {
+                // position: sticky;
+                // top: 0;
+                // z-index: 10;
+                background-color: #5bc0be;
+                color: #ffffff;
+            }
+            ul {
+                width: 150px;
+                position: relative;
+                list-style-type: none;
+            }
+            li {
+                text-align: center;
+                width: 48%;
+                float: left;
+            }
+            li:nth-child(4n) {
+                background-color: #eee;
+            }
+            li:nth-child(4n-1) {
+                background-color: #eee;
+            }
+            h2 {
+                float: left;
+            }
+            .graph {
+              // margin-bottom:1em;
+              font:normal 100%/150% arial,helvetica,sans-serif;
+            }
+            .graph caption {
+                font:bold 150%/120% arial,helvetica,sans-serif;
+                padding-bottom:0.33em;
+            }
+            .graph tbody th {
+                text-align:right;
+            }
+            .info {
+                float: left;
+            }
+            .info svg {
+                margin: auto;
+                display: block;
+                padding-top: 10px;
+                padding-left: 50px;
+            }
+            @supports (display:grid) {
+                @media (min-width:32em) {
+                    .graph {
+                        display:block;
+                        width:100%;
+                        height:300px;
+                    }
+                    .graph caption {
+                        display:block;
+                    }
+                    .graph thead {
+                        display:none;
+                    }
+                    .graph tbody {
+                        position:relative;
+                        display:grid;
+                        grid-template-columns:repeat(auto-fit, minmax(3px, 1fr));
+                        // column-gap:2.5%;
+                        align-items:end;
+                        height:100%;
+                        margin:3em 0 1em 2.8em;
+                        padding:0 3px;
+                        border-bottom:2px solid rgba(0,0,0,0.5);
+                        background:repeating-linear-gradient(
+                            180deg,
+                            rgba(170,170,170,0.7) 0,
+                            rgba(170,170,170,0.7) 1px,
+                            transparent 1px,
+                            transparent 20%
+                        );
+                    }
+                    .graph tbody:before,
+                    .graph tbody:after {
+                        position:absolute;
+                        left:-3.2em;
+                        width:2.8em;
+                        text-align:right;
+                        font:bold 80%/120% arial,helvetica,sans-serif;
+                    }
+                    .graph tbody:before {
+                        content:"15ft";
+                        top:-0.6em;
+                    }
+                    .graph tbody:after {
+                        content:"0ft";
+                        bottom:-0.6em;
+                    }
+                    .graph tr {
+                        position:relative;
+                        display:block;
+                    }
+                    .graph tr:nth-child(1) td {
+                        background: #555;
+                    }
+                    .graph tr:nth-child(8n+1) td {
+                        background: #555;
+                    }
+                    .graph tr:hover {
+                        z-index:999;
+                    }
+                    .graph th,
+                    .graph td {
+                        display:block;
+                        text-align:center;
+                        padding: 0px;
+                    }
+                    .graph tbody th {
+                        position:absolute;
+                        top:-3em;
+                        left:0;
+                        width:100%;
+                        font-weight:normal;
+                        text-align:center;
+                        white-space:nowrap;
+                        text-indent:0;
+                        transform:rotate(-45deg);
+                    }
+                    .graph tbody th:after {
+                        content:"";
+                    }
+                    .graph td {
+                        // width:100%;
+                        width: 15px;
+                        height:100%;
+                        background:#5bc0be;
+                        border-radius:0.25em 0.25em 0 0;
+                        transition:background 0.5s;
+                        padding: 0px;
+                    }
+                    .graph tr:hover td {
+                        opacity:0.7;
+                    }
+                    .graph td span {
+                        overflow:hidden;
+                        position:absolute;
+                        left:50%;
+                        top:-15px;
+                        width:0;
+                        padding:0.5em 0;
+                        margin:-1em 0 0;
+                        font:normal 85%/120% arial,helvetica,sans-serif;
+            /* 			background:white; */
+            /* 			box-shadow:0 0 0.25em rgba(0,0,0,0.6); */
+                        font-weight:bold;
+                        opacity:0;
+                        transition:opacity 0.5s;
+                        color:#111;
+                    }
+                    .graph td em {
+                        font-style:normal;
+                        overflow:hidden;
+                        position:absolute;
+                        left: -40px;
+                        bottom: 255px;
+                        padding:0.5em 0;
+                        margin:-1em 0 0;
+                        font:normal 85%/120% arial,helvetica,sans-serif;
+                        font-weight:bold;
+                        opacity: 1;
+                        color:#444;
+                        width: 75px;
+                    }
+                    .toggleGraph:checked + table td span,
+                    .graph tr:hover td span {
+                        width:4em;
+                        margin-left:-2em; /* 1/2 the declared width */
+                        opacity:1;
+                    }
+                } /* min-width:32em */
+            } /* grid only */</style><body><main class=container><table class=graph><thead><tr><th scope=col>Item<th scope=col>Percent<tbody><tr style=height:25.3333%><td><i title="178 degrees"class=red style=transform-origin:50%;transform:rotate(268deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(316deg)>➤</div> <span>3.8ft</span><tr style=height:23.3333%><td><i title="126 degrees"class=orange style=transform-origin:50%;transform:rotate(216deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(318deg)>➤</div> <span>3.5ft</span><tr style=height:22%><td><i title="102 degrees"class=orange style=transform-origin:50%;transform:rotate(192deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(319deg)>➤</div> <span>3.3ft</span><tr style=height:20.6667%><td><i title="94 degrees"class=green style=transform-origin:50%;transform:rotate(184deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(321deg)>➤</div> <span>3.1ft</span><tr style=height:20%><td><i title="184 degrees"class=red style=transform-origin:50%;transform:rotate(274deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <em>Wed 20 Mar</em> <span>3.0ft</span><tr style=height:18.6667%><td><i title="293 degrees"class=red style=transform-origin:50%;transform:rotate(383deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>2.8ft</span><tr style=height:17.3333%><td style="background:linear-gradient(90deg,#5bc0be 15.6%,#999 15.6%,#919191 33.9%,#555 33.9%)"class=ss-ll><i title="22 degrees"class=green style=transform-origin:50%;transform:rotate(112deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>2.6ft</span><tr style=height:16%><td class=night><i title="15 degrees"class=green style=transform-origin:50%;transform:rotate(105deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>2.4ft</span><tr style=height:14.6667%><td><i title="348 degrees"class=orange style=transform-origin:50%;transform:rotate(438deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>2.2ft</span><tr style=height:13.3333%><td><i title="2 degrees"class=orange style=transform-origin:50%;transform:rotate(92deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>2.0ft</span><tr style=height:12.6667%><td><i title="339 degrees"class=orange style=transform-origin:50%;transform:rotate(429deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>1.9ft</span><tr style=height:11.3333%><td><i title="76 degrees"class=green style=transform-origin:50%;transform:rotate(166deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(321deg)>➤</div> <span>1.7ft</span><tr style=height:10.6667%><td><i title="173 degrees"class=red style=transform-origin:50%;transform:rotate(263deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <em>Thu 21 Mar</em> <span>1.6ft</span><tr style=height:10.6667%><td><i title="239 degrees"class=red style=transform-origin:50%;transform:rotate(329deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(322deg)>➤</div> <span>1.6ft</span><tr style=height:10.6667%><td style="background:linear-gradient(90deg,#5bc0be 16.7%,#999 16.7%,#919191 34.4%,#555 34.4%)"class=ss-ll><i title="236 degrees"class=red style=transform-origin:50%;transform:rotate(326deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(320deg)>➤</div> <span>1.6ft</span><tr style=height:12%><td class=night><i title="266 degrees"class=red style=transform-origin:50%;transform:rotate(356deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(318deg)>➤</div> <span>1.8ft</span><tr style=height:12.6667%><td><i title="267 degrees"class=red style=transform-origin:50%;transform:rotate(357deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(320deg)>➤</div> <span>1.9ft</span><tr style=height:14%><td><i title="257 degrees"class=red style=transform-origin:50%;transform:rotate(347deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(320deg)>➤</div> <span>2.1ft</span><tr style=height:16.6667%><td><i title="302 degrees"class=red style=transform-origin:50%;transform:rotate(392deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(320deg)>➤</div> <span>2.5ft</span><tr style=height:16%><td><i title="251 degrees"class=red style=transform-origin:50%;transform:rotate(341deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(320deg)>➤</div> <span>2.4ft</span><tr style=height:14.6667%><td><i title="332 degrees"class=orange style=transform-origin:50%;transform:rotate(422deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(329deg)>➤</div> <em>Fri 22 Mar</em> <span>2.2ft</span><tr style=height:15.3333%><td><i title="318 degrees"class=orange style=transform-origin:50%;transform:rotate(408deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(349deg)>➤</div> <span>2.3ft</span><tr style=height:16%><td style="background:linear-gradient(90deg,#5bc0be 17.2%,#999 17.2%,#919191 35.6%,#555 35.6%)"class=ss-ll><i title="316 degrees"class=orange style=transform-origin:50%;transform:rotate(406deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(352deg)>➤</div> <span>2.4ft</span><tr style=height:27.3333%><td class=night><i title="306 degrees"class=red style=transform-origin:50%;transform:rotate(396deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(363deg)>➤</div> <span>4.1ft</span><tr style=height:28.6667%><td><i title="295 degrees"class=red style=transform-origin:50%;transform:rotate(385deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(365deg)>➤</div> <span>4.3ft</span><tr style=height:31.3333%><td><i title="289 degrees"class=red style=transform-origin:50%;transform:rotate(379deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(368deg)>➤</div> <span>4.7ft</span><tr style=height:32%><td><i title="278 degrees"class=red style=transform-origin:50%;transform:rotate(368deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(368deg)>➤</div> <span>4.8ft</span><tr style=height:34%><td><i title="280 degrees"class=red style=transform-origin:50%;transform:rotate(370deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(368deg)>➤</div> <span>5.1ft</span><tr style=height:41.3333%><td><i title="293 degrees"class=red style=transform-origin:50%;transform:rotate(383deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(367deg)>➤</div> <em>Sat 23 Mar</em> <span>6.2ft</span><tr style=height:41.3333%><td><i title="299 degrees"class=red style=transform-origin:50%;transform:rotate(389deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(365deg)>➤</div> <span>6.2ft</span><tr style=height:40%><td style="background:linear-gradient(90deg,#5bc0be 18.3%,#999 18.3%,#919191 36.7%,#555 36.7%)"class=ss-ll><i title="286 degrees"class=red style=transform-origin:50%;transform:rotate(376deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(367deg)>➤</div> <span>6.0ft</span><tr style=height:32.6667%><td class=night><i title="298 degrees"class=red style=transform-origin:50%;transform:rotate(388deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(363deg)>➤</div> <span>4.9ft</span><tr style=height:28.6667%><td><i title="311 degrees"class=orange style=transform-origin:50%;transform:rotate(401deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(358deg)>➤</div> <span>4.3ft</span><tr style=height:27.3333%><td><i title="300 degrees"class=red style=transform-origin:50%;transform:rotate(390deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(362deg)>➤</div> <span>4.1ft</span><tr style=height:25.3333%><td><i title="295 degrees"class=red style=transform-origin:50%;transform:rotate(385deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(364deg)>➤</div> <span>3.8ft</span><tr style=height:22.6667%><td><i title="290 degrees"class=red style=transform-origin:50%;transform:rotate(380deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(361deg)>➤</div> <span>3.4ft</span><tr style=height:24%><td><i title="271 degrees"class=red style=transform-origin:50%;transform:rotate(361deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(362deg)>➤</div> <em>Sun 24 Mar</em> <span>3.6ft</span><tr style=height:23.3333%><td><i title="229 degrees"class=red style=transform-origin:50%;transform:rotate(319deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(356deg)>➤</div> <span>3.5ft</span><tr style=height:21.3333%><td style="background:linear-gradient(90deg,#5bc0be 19.4%,#999 19.4%,#919191 37.2%,#555 37.2%)"class=ss-ll><i title="230 degrees"class=red style=transform-origin:50%;transform:rotate(320deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(344deg)>➤</div> <span>3.2ft</span><tr style=height:31.3333%><td class=night><i title="238 degrees"class=red style=transform-origin:50%;transform:rotate(328deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(333deg)>➤</div> <span>4.7ft</span><tr style=height:41.3333%><td><i title="256 degrees"class=red style=transform-origin:50%;transform:rotate(346deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(331deg)>➤</div> <span>6.2ft</span><tr style=height:34%><td><i title="292 degrees"class=red style=transform-origin:50%;transform:rotate(382deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(337deg)>➤</div> <span>5.1ft</span><tr style=height:29.3333%><td><i title="288 degrees"class=red style=transform-origin:50%;transform:rotate(378deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(341deg)>➤</div> <span>4.4ft</span><tr style=height:28.6667%><td><i title="271 degrees"class=red style=transform-origin:50%;transform:rotate(361deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(342deg)>➤</div> <span>4.3ft</span><tr style=height:35.3333%><td><i title="253 degrees"class=red style=transform-origin:50%;transform:rotate(343deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(338deg)>➤</div> <em>Mon 25 Mar</em> <span>5.3ft</span><tr style=height:40.6667%><td><i title="262 degrees"class=red style=transform-origin:50%;transform:rotate(352deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(338deg)>➤</div> <span>6.1ft</span><tr style=height:37.3333%><td style="background:linear-gradient(90deg,#5bc0be 20%,#999 20%,#919191 38.3%,#555 38.3%)"class=ss-ll><i title="265 degrees"class=red style=transform-origin:50%;transform:rotate(355deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(337deg)>➤</div> <span>5.6ft</span><tr style=height:34%><td class=night><i title="252 degrees"class=red style=transform-origin:50%;transform:rotate(342deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(334deg)>➤</div> <span>5.1ft</span><tr style=height:36.6667%><td><i title="254 degrees"class=red style=transform-origin:50%;transform:rotate(344deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(334deg)>➤</div> <span>5.5ft</span><tr style=height:37.3333%><td><i title="258 degrees"class=red style=transform-origin:50%;transform:rotate(348deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(331deg)>➤</div> <span>5.6ft</span><tr style=height:36.6667%><td><i title="45 degrees"class=green style=transform-origin:50%;transform:rotate(135deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(327deg)>➤</div> <span>5.5ft</span><tr style=height:36%><td><i title="18 degrees"class=green style=transform-origin:50%;transform:rotate(108deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(327deg)>➤</div> <span>5.4ft</span><tr style=height:34%><td><i title="257 degrees"class=red style=transform-origin:50%;transform:rotate(347deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(327deg)>➤</div> <em>Tue 26 Mar</em> <span>5.1ft</span><tr style=height:34%><td><i title="266 degrees"class=red style=transform-origin:50%;transform:rotate(356deg)>➜</i> <div style=transform-origin:.5em;transform:rotate(325deg)>➤</div> <span>5.1ft</span></table><h2>2024-03-20 - Wednesday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:49<li>Sunrise<li>06:22<li>Sunset<li>18:28<li>Last Light<li>19:01</ul><ul style=float:left><li>4.3m<li>02:06<li>2.5m<li>08:38<li>4.3m<li>15:12<li>2.6m<li>21:06</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=96.9 x=0 y=0 /><rect fill=#eee height=80 width=9.199999999999989 x=96.9 y=0 /><rect fill=#eee height=80 width=9.099999999999966 x=307.8 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=83.10000000000002 x=316.9 y=0 /><circle cx=35.0 cy=22.700000000000003 fill=black fill-opacity=0 r=8><title>4.3m</title></circle><path d="M35.0,22.700000000000003 L35.0,80"stroke=black stroke-width=0.5 /><circle cx=143.9 cy=46.7 fill=black fill-opacity=0 r=8><title>2.5m</title></circle><path d="M143.9,46.7 L143.9,80"stroke=black stroke-width=0.5 /><circle cx=253.3 cy=22.700000000000003 fill=black fill-opacity=0 r=8><title>4.3m</title></circle><path d="M253.3,22.700000000000003 L253.3,80"stroke=black stroke-width=0.5 /><circle cx=351.7 cy=45.3 fill=black fill-opacity=0 r=8><title>2.6m</title></circle><path d="M351.7,45.3 L351.7,80"stroke=black stroke-width=0.5 /><circle cx=457.5 cy=60.0 fill=black fill-opacity=0 r=8><title>4.5m</title></circle><path d="M457.5,20.0 L457.5,80"stroke=black stroke-width=0.5 /><path d="M-72.19999999999999,42.7 C-22.19999999999999,42.7,-15.0,22.700000000000003,35.0,22.700000000000003 S93.9,46.7,143.9,46.7 S203.3,22.700000000000003,253.3,22.700000000000003 S301.7,45.3,351.7,45.3 S407.5,20.0,457.5,20.0"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>3.3ft<td>9s<td><div title="229 degrees"style=transform-origin:.5em;transform:rotate(319deg)>➤</div><td>3.3ft<td>9s<td><div title="229 degrees"style=transform-origin:.5em;transform:rotate(319deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>7mph<td>10<td class=orange><div title="121 degrees"style=transform-origin:.5em;transform:rotate(211deg)>➜</div><td>☁<tr><td class=twilight>06:00<td>3.3ft<td>9s<td><div title="229 degrees"style=transform-origin:.5em;transform:rotate(319deg)>➤</div><td>3.3ft<td>9s<td><div title="229 degrees"style=transform-origin:.5em;transform:rotate(319deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>6mph<td>10<td class=orange><div title="102 degrees"style=transform-origin:.5em;transform:rotate(192deg)>➜</div><td>☁<tr><td class=day>07:00<td>3.2ft<td>9s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>3.2ft<td>9s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>6mph<td>9<td class=orange><div title="107 degrees"style=transform-origin:.5em;transform:rotate(197deg)>➜</div><td>☁<tr><td class=day>08:00<td>3.1ft<td>9s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>3.1ft<td>9s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>5mph<td>9<td class=orange><div title="105 degrees"style=transform-origin:.5em;transform:rotate(195deg)>➜</div><td>☁<tr><td class=day>09:00<td>3.1ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>3.1ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>4mph<td>7<td class=green><div title="94 degrees"style=transform-origin:.5em;transform:rotate(184deg)>➜</div><td>☁<tr><td class=day>10:00<td>3.0ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>3.0ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>5mph<td>8<td class=green><div title="79 degrees"style=transform-origin:.5em;transform:rotate(169deg)>➜</div><td>🌧</table></div><h2>2024-03-21 - Thursday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:47<li>Sunrise<li>06:20<li>Sunset<li>18:30<li>Last Light<li>19:02</ul><ul style=float:left><li>4.5m<li>03:27<li>2.3m<li>09:42<li>4.5m<li>16:07<li>2.3m<li>21:59</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=96.4 x=0 y=0 /><rect fill=#eee height=80 width=9.199999999999989 x=96.4 y=0 /><rect fill=#eee height=80 width=8.899999999999977 x=308.3 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=82.80000000000001 x=317.2 y=0 /><circle cx=57.5 cy=20.0 fill=black fill-opacity=0 r=8><title>4.5m</title></circle><path d="M57.5,20.0 L57.5,80"stroke=black stroke-width=0.5 /><circle cx=161.7 cy=49.3 fill=black fill-opacity=0 r=8><title>2.3m</title></circle><path d="M161.7,49.3 L161.7,80"stroke=black stroke-width=0.5 /><circle cx=268.6 cy=20.0 fill=black fill-opacity=0 r=8><title>4.5m</title></circle><path d="M268.6,20.0 L268.6,80"stroke=black stroke-width=0.5 /><circle cx=366.4 cy=49.3 fill=black fill-opacity=0 r=8><title>2.3m</title></circle><path d="M366.4,49.3 L366.4,80"stroke=black stroke-width=0.5 /><circle cx=470.6 cy=64.0 fill=black fill-opacity=0 r=8><title>4.8m</title></circle><path d="M470.6,16.0 L470.6,80"stroke=black stroke-width=0.5 /><path d="M-48.30000000000001,45.3 C1.6999999999999886,45.3,7.5,20.0,57.5,20.0 S111.69999999999999,49.3,161.7,49.3 S218.60000000000002,20.0,268.6,20.0 S316.4,49.3,366.4,49.3 S420.6,16.0,470.6,16.0"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>1.9ft<td>9s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>2.0ft<td>9s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>5mph<td>7<td class=orange><div title="340 degrees"style=transform-origin:.5em;transform:rotate(430deg)>➜</div><td>☁<tr><td class=twilight>06:00<td>1.9ft<td>9s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>1.9ft<td>9s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>5mph<td>7<td class=orange><div title="339 degrees"style=transform-origin:.5em;transform:rotate(429deg)>➜</div><td>☁<tr><td class=day>07:00<td>1.8ft<td>9s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>1.8ft<td>9s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>5mph<td>7<td class=orange><div title="335 degrees"style=transform-origin:.5em;transform:rotate(425deg)>➜</div><td>☁<tr><td class=day>08:00<td>1.8ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>1.8ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>7mph<td>10<td class=orange><div title="343 degrees"style=transform-origin:.5em;transform:rotate(433deg)>➜</div><td>☁<tr><td class=day>09:00<td>1.7ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>1.7ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>1mph<td>10<td class=green><div title="76 degrees"style=transform-origin:.5em;transform:rotate(166deg)>➜</div><td>☁<tr><td class=day>10:00<td>1.7ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>1.7ft<td>9s<td><div title="231 degrees"style=transform-origin:.5em;transform:rotate(321deg)>➤</div><td>0.1ft<td>1s<td><div title="285 degrees"style=transform-origin:.5em;transform:rotate(375deg)>➤</div><td>2mph<td>2<td class=red><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➜</div><td>⛅</table></div><h2>2024-03-22 - Friday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:45<li>Sunrise<li>06:17<li>Sunset<li>18:31<li>Last Light<li>19:04</ul><ul style=float:left><li>4.8m<li>04:14<li>2.0m<li>10:26<li>4.8m<li>16:41<li>1.9m<li>22:39</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=95.8 x=0 y=0 /><rect fill=#eee height=80 width=8.900000000000006 x=95.8 y=0 /><rect fill=#eee height=80 width=9.199999999999989 x=308.6 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=82.19999999999999 x=317.8 y=0 /><circle cx=70.6 cy=16.0 fill=black fill-opacity=0 r=8><title>4.8m</title></circle><path d="M70.6,16.0 L70.6,80"stroke=black stroke-width=0.5 /><circle cx=173.9 cy=53.3 fill=black fill-opacity=0 r=8><title>2.0m</title></circle><path d="M173.9,53.3 L173.9,80"stroke=black stroke-width=0.5 /><circle cx=278.1 cy=16.0 fill=black fill-opacity=0 r=8><title>4.8m</title></circle><path d="M278.1,16.0 L278.1,80"stroke=black stroke-width=0.5 /><circle cx=377.5 cy=54.7 fill=black fill-opacity=0 r=8><title>1.9m</title></circle><path d="M377.5,54.7 L377.5,80"stroke=black stroke-width=0.5 /><circle cx=479.4 cy=66.7 fill=black fill-opacity=0 r=8><title>5.0m</title></circle><path d="M479.4,13.299999999999997 L479.4,80"stroke=black stroke-width=0.5 /><path d="M-33.60000000000002,49.3 C16.399999999999977,49.3,20.599999999999994,16.0,70.6,16.0 S123.9,53.3,173.9,53.3 S228.10000000000002,16.0,278.1,16.0 S327.5,54.7,377.5,54.7 S429.4,13.299999999999997,479.4,13.299999999999997"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>2.4ft<td>5s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>2.0ft<td>6s<td><div title="225 degrees"style=transform-origin:.5em;transform:rotate(315deg)>➤</div><td>1.3ft<td>3s<td><div title="244 degrees"style=transform-origin:.5em;transform:rotate(334deg)>➤</div><td>6mph<td>15<td class=red><div title="296 degrees"style=transform-origin:.5em;transform:rotate(386deg)>➜</div><td>☁<tr><td class=twilight>06:00<td>2.5ft<td>5s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>2.2ft<td>6s<td><div title="225 degrees"style=transform-origin:.5em;transform:rotate(315deg)>➤</div><td>1.2ft<td>3s<td><div title="245 degrees"style=transform-origin:.5em;transform:rotate(335deg)>➤</div><td>3mph<td>10<td class=red><div title="302 degrees"style=transform-origin:.5em;transform:rotate(392deg)>➜</div><td>☁<tr><td class=day>07:00<td>2.6ft<td>5s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>2.4ft<td>6s<td><div title="225 degrees"style=transform-origin:.5em;transform:rotate(315deg)>➤</div><td>1.2ft<td>3s<td><div title="252 degrees"style=transform-origin:.5em;transform:rotate(342deg)>➤</div><td>6mph<td>11<td class=red><div title="256 degrees"style=transform-origin:.5em;transform:rotate(346deg)>➜</div><td>☁<tr><td class=day>08:00<td>2.6ft<td>6s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>2.5ft<td>6s<td><div title="228 degrees"style=transform-origin:.5em;transform:rotate(318deg)>➤</div><td>0.6ft<td>2s<td><div title="282 degrees"style=transform-origin:.5em;transform:rotate(372deg)>➤</div><td>9mph<td>15<td class=red><div title="255 degrees"style=transform-origin:.5em;transform:rotate(345deg)>➜</div><td>🌧<tr><td class=day>09:00<td>2.4ft<td>6s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>2.4ft<td>6s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>0.3ft<td>2s<td><div title="311 degrees"style=transform-origin:.5em;transform:rotate(401deg)>➤</div><td>12mph<td>18<td class=red><div title="251 degrees"style=transform-origin:.5em;transform:rotate(341deg)>➜</div><td>🌧<tr><td class=day>10:00<td>2.3ft<td>6s<td><div title="232 degrees"style=transform-origin:.5em;transform:rotate(322deg)>➤</div><td>2.2ft<td>7s<td><div title="230 degrees"style=transform-origin:.5em;transform:rotate(320deg)>➤</div><td>0.5ft<td>2s<td><div title="302 degrees"style=transform-origin:.5em;transform:rotate(392deg)>➤</div><td>12mph<td>20<td class=red><div title="272 degrees"style=transform-origin:.5em;transform:rotate(362deg)>➜</div><td>🌧</table></div><h2>2024-03-23 - Saturday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:43<li>Sunrise<li>06:15<li>Sunset<li>18:33<li>Last Light<li>19:06</ul><ul style=float:left><li>5.0m<li>04:46<li>1.7m<li>11:00<li>5.0m<li>17:07<li>1.7m<li>23:12</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=95.3 x=0 y=0 /><rect fill=#eee height=80 width=8.900000000000006 x=95.3 y=0 /><rect fill=#eee height=80 width=9.100000000000023 x=309.2 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=81.69999999999999 x=318.3 y=0 /><circle cx=79.4 cy=13.299999999999997 fill=black fill-opacity=0 r=8><title>5.0m</title></circle><path d="M79.4,13.299999999999997 L79.4,80"stroke=black stroke-width=0.5 /><circle cx=183.3 cy=57.3 fill=black fill-opacity=0 r=8><title>1.7m</title></circle><path d="M183.3,57.3 L183.3,80"stroke=black stroke-width=0.5 /><circle cx=285.3 cy=13.299999999999997 fill=black fill-opacity=0 r=8><title>5.0m</title></circle><path d="M285.3,13.299999999999997 L285.3,80"stroke=black stroke-width=0.5 /><circle cx=386.7 cy=57.3 fill=black fill-opacity=0 r=8><title>1.7m</title></circle><path d="M386.7,57.3 L386.7,80"stroke=black stroke-width=0.5 /><circle cx=486.7 cy=69.3 fill=black fill-opacity=0 r=8><title>5.2m</title></circle><path d="M486.7,10.700000000000003 L486.7,80"stroke=black stroke-width=0.5 /><path d="M-22.5,54.7 C27.5,54.7,29.400000000000006,13.299999999999997,79.4,13.299999999999997 S133.3,57.3,183.3,57.3 S235.3,13.299999999999997,285.3,13.299999999999997 S336.7,57.3,386.7,57.3 S436.7,10.700000000000003,486.7,10.700000000000003"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>4.7ft<td>7s<td><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➤</div><td>3.1ft<td>10s<td><div title="248 degrees"style=transform-origin:.5em;transform:rotate(338deg)>➤</div><td>3.6ft<td>4s<td><div title="301 degrees"style=transform-origin:.5em;transform:rotate(391deg)>➤</div><td>16mph<td>28<td class=red><div title="279 degrees"style=transform-origin:.5em;transform:rotate(369deg)>➜</div><td>🌧<tr><td class=twilight>06:00<td>4.8ft<td>7s<td><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➤</div><td>3.1ft<td>10s<td><div title="248 degrees"style=transform-origin:.5em;transform:rotate(338deg)>➤</div><td>3.6ft<td>4s<td><div title="301 degrees"style=transform-origin:.5em;transform:rotate(391deg)>➤</div><td>20mph<td>36<td class=red><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➜</div><td>🌧<tr><td class=day>07:00<td>4.9ft<td>7s<td><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➤</div><td>3.1ft<td>10s<td><div title="248 degrees"style=transform-origin:.5em;transform:rotate(338deg)>➤</div><td>3.8ft<td>4s<td><div title="298 degrees"style=transform-origin:.5em;transform:rotate(388deg)>➤</div><td>20mph<td>36<td class=red><div title="276 degrees"style=transform-origin:.5em;transform:rotate(366deg)>➜</div><td>🌧<tr><td class=day>08:00<td>5.0ft<td>6s<td><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➤</div><td>3.0ft<td>11s<td><div title="247 degrees"style=transform-origin:.5em;transform:rotate(337deg)>➤</div><td>4.1ft<td>4s<td><div title="296 degrees"style=transform-origin:.5em;transform:rotate(386deg)>➤</div><td>18mph<td>33<td class=red><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➜</div><td>🌧<tr><td class=day>09:00<td>5.1ft<td>6s<td><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➤</div><td>2.9ft<td>11s<td><div title="247 degrees"style=transform-origin:.5em;transform:rotate(337deg)>➤</div><td>4.3ft<td>4s<td><div title="293 degrees"style=transform-origin:.5em;transform:rotate(383deg)>➤</div><td>16mph<td>32<td class=red><div title="280 degrees"style=transform-origin:.5em;transform:rotate(370deg)>➜</div><td>🌧<tr><td class=day>10:00<td>5.4ft<td>6s<td><div title="278 degrees"style=transform-origin:.5em;transform:rotate(368deg)>➤</div><td>2.8ft<td>11s<td><div title="246 degrees"style=transform-origin:.5em;transform:rotate(336deg)>➤</div><td>4.7ft<td>4s<td><div title="290 degrees"style=transform-origin:.5em;transform:rotate(380deg)>➤</div><td>19mph<td>32<td class=red><div title="287 degrees"style=transform-origin:.5em;transform:rotate(377deg)>➜</div><td>🌧</table></div><h2>2024-03-24 - Sunday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:40<li>Sunrise<li>06:13<li>Sunset<li>18:35<li>Last Light<li>19:07</ul><ul style=float:left><li>5.2m<li>05:12<li>1.4m<li>11:31<li>5.2m<li>17:30<li>1.4m<li>23:42</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=94.4 x=0 y=0 /><rect fill=#eee height=80 width=9.199999999999989 x=94.4 y=0 /><rect fill=#eee height=80 width=8.900000000000034 x=309.7 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=81.39999999999998 x=318.6 y=0 /><circle cx=86.7 cy=10.700000000000003 fill=black fill-opacity=0 r=8><title>5.2m</title></circle><path d="M86.7,10.700000000000003 L86.7,80"stroke=black stroke-width=0.5 /><circle cx=191.9 cy=61.3 fill=black fill-opacity=0 r=8><title>1.4m</title></circle><path d="M191.9,61.3 L191.9,80"stroke=black stroke-width=0.5 /><circle cx=291.7 cy=10.700000000000003 fill=black fill-opacity=0 r=8><title>5.2m</title></circle><path d="M291.7,10.700000000000003 L291.7,80"stroke=black stroke-width=0.5 /><circle cx=395.0 cy=61.3 fill=black fill-opacity=0 r=8><title>1.4m</title></circle><path d="M395.0,61.3 L395.0,80"stroke=black stroke-width=0.5 /><circle cx=493.9 cy=72.0 fill=black fill-opacity=0 r=8><title>5.4m</title></circle><path d="M493.9,8.0 L493.9,80"stroke=black stroke-width=0.5 /><path d="M-13.300000000000011,57.3 C36.69999999999999,57.3,36.7,10.700000000000003,86.7,10.700000000000003 S141.9,61.3,191.9,61.3 S241.7,10.700000000000003,291.7,10.700000000000003 S345.0,61.3,395.0,61.3 S443.9,8.0,493.9,8.0"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>3.9ft<td>7s<td><div title="273 degrees"style=transform-origin:.5em;transform:rotate(363deg)>➤</div><td>2.8ft<td>10s<td><div title="249 degrees"style=transform-origin:.5em;transform:rotate(339deg)>➤</div><td>2.8ft<td>4s<td><div title="302 degrees"style=transform-origin:.5em;transform:rotate(392deg)>➤</div><td>17mph<td>26<td class=red><div title="294 degrees"style=transform-origin:.5em;transform:rotate(384deg)>➜</div><td>☀<tr><td class=twilight>06:00<td>3.8ft<td>7s<td><div title="274 degrees"style=transform-origin:.5em;transform:rotate(364deg)>➤</div><td>2.8ft<td>10s<td><div title="249 degrees"style=transform-origin:.5em;transform:rotate(339deg)>➤</div><td>2.7ft<td>4s<td><div title="302 degrees"style=transform-origin:.5em;transform:rotate(392deg)>➤</div><td>17mph<td>26<td class=red><div title="295 degrees"style=transform-origin:.5em;transform:rotate(385deg)>➜</div><td>☀<tr><td class=day>07:00<td>3.7ft<td>7s<td><div title="273 degrees"style=transform-origin:.5em;transform:rotate(363deg)>➤</div><td>2.7ft<td>10s<td><div title="249 degrees"style=transform-origin:.5em;transform:rotate(339deg)>➤</div><td>2.6ft<td>4s<td><div title="301 degrees"style=transform-origin:.5em;transform:rotate(391deg)>➤</div><td>7mph<td>13<td class=red><div title="304 degrees"style=transform-origin:.5em;transform:rotate(394deg)>➜</div><td>☁<tr><td class=day>08:00<td>3.5ft<td>7s<td><div title="272 degrees"style=transform-origin:.5em;transform:rotate(362deg)>➤</div><td>2.6ft<td>10s<td><div title="249 degrees"style=transform-origin:.5em;transform:rotate(339deg)>➤</div><td>2.5ft<td>4s<td><div title="299 degrees"style=transform-origin:.5em;transform:rotate(389deg)>➤</div><td>8mph<td>15<td class=red><div title="297 degrees"style=transform-origin:.5em;transform:rotate(387deg)>➜</div><td>☁<tr><td class=day>09:00<td>3.4ft<td>7s<td><div title="271 degrees"style=transform-origin:.5em;transform:rotate(361deg)>➤</div><td>2.5ft<td>10s<td><div title="249 degrees"style=transform-origin:.5em;transform:rotate(339deg)>➤</div><td>2.4ft<td>3s<td><div title="298 degrees"style=transform-origin:.5em;transform:rotate(388deg)>➤</div><td>9mph<td>17<td class=red><div title="290 degrees"style=transform-origin:.5em;transform:rotate(380deg)>➜</div><td>☁<tr><td class=day>10:00<td>3.5ft<td>6s<td><div title="271 degrees"style=transform-origin:.5em;transform:rotate(361deg)>➤</div><td>2.4ft<td>10s<td><div title="249 degrees"style=transform-origin:.5em;transform:rotate(339deg)>➤</div><td>2.5ft<td>4s<td><div title="294 degrees"style=transform-origin:.5em;transform:rotate(384deg)>➤</div><td>11mph<td>19<td class=red><div title="283 degrees"style=transform-origin:.5em;transform:rotate(373deg)>➜</div><td>☁</table></div><h2>2024-03-25 - Monday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:38<li>Sunrise<li>06:11<li>Sunset<li>18:36<li>Last Light<li>19:09</ul><ul style=float:left><li>5.4m<li>05:38<li>1.2m<li>12:00<li>5.4m<li>17:54</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=93.9 x=0 y=0 /><rect fill=#eee height=80 width=9.199999999999989 x=93.9 y=0 /><rect fill=#eee height=80 width=9.199999999999989 x=310.0 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=80.80000000000001 x=319.2 y=0 /><circle cx=93.9 cy=8.0 fill=black fill-opacity=0 r=8><title>5.4m</title></circle><path d="M93.9,8.0 L93.9,80"stroke=black stroke-width=0.5 /><circle cx=200.0 cy=64.0 fill=black fill-opacity=0 r=8><title>1.2m</title></circle><path d="M200.0,64.0 L200.0,80"stroke=black stroke-width=0.5 /><circle cx=298.3 cy=8.0 fill=black fill-opacity=0 r=8><title>5.4m</title></circle><path d="M298.3,8.0 L298.3,80"stroke=black stroke-width=0.5 /><circle cx=403.3 cy=17.3 fill=black fill-opacity=0 r=8><title>1.3m</title></circle><path d="M403.3,62.7 L403.3,80"stroke=black stroke-width=0.5 /><path d="M-5.0,61.3 C45.0,61.3,43.900000000000006,8.0,93.9,8.0 S150.0,64.0,200.0,64.0 S248.3,8.0,298.3,8.0 S353.3,62.7,403.3,62.7"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>4.6ft<td>6s<td><div title="250 degrees"style=transform-origin:.5em;transform:rotate(340deg)>➤</div><td>3.6ft<td>7s<td><div title="235 degrees"style=transform-origin:.5em;transform:rotate(325deg)>➤</div><td>2.9ft<td>4s<td><div title="274 degrees"style=transform-origin:.5em;transform:rotate(364deg)>➤</div><td>10mph<td>22<td class=red><div title="294 degrees"style=transform-origin:.5em;transform:rotate(384deg)>➜</div><td>⛅<tr><td class=twilight>06:00<td>4.4ft<td>6s<td><div title="251 degrees"style=transform-origin:.5em;transform:rotate(341deg)>➤</div><td>3.4ft<td>7s<td><div title="236 degrees"style=transform-origin:.5em;transform:rotate(326deg)>➤</div><td>2.8ft<td>4s<td><div title="275 degrees"style=transform-origin:.5em;transform:rotate(365deg)>➤</div><td>9mph<td>18<td class=red><div title="288 degrees"style=transform-origin:.5em;transform:rotate(378deg)>➜</div><td>⛅<tr><td class=day>07:00<td>4.3ft<td>6s<td><div title="251 degrees"style=transform-origin:.5em;transform:rotate(341deg)>➤</div><td>3.3ft<td>7s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>2.9ft<td>4s<td><div title="272 degrees"style=transform-origin:.5em;transform:rotate(362deg)>➤</div><td>10mph<td>20<td class=red><div title="283 degrees"style=transform-origin:.5em;transform:rotate(373deg)>➜</div><td>⛅<tr><td class=day>08:00<td>4.3ft<td>6s<td><div title="252 degrees"style=transform-origin:.5em;transform:rotate(342deg)>➤</div><td>3.1ft<td>8s<td><div title="238 degrees"style=transform-origin:.5em;transform:rotate(328deg)>➤</div><td>3.0ft<td>4s<td><div title="268 degrees"style=transform-origin:.5em;transform:rotate(358deg)>➤</div><td>11mph<td>21<td class=red><div title="277 degrees"style=transform-origin:.5em;transform:rotate(367deg)>➜</div><td>⛅<tr><td class=day>09:00<td>4.3ft<td>6s<td><div title="252 degrees"style=transform-origin:.5em;transform:rotate(342deg)>➤</div><td>3.0ft<td>8s<td><div title="239 degrees"style=transform-origin:.5em;transform:rotate(329deg)>➤</div><td>3.1ft<td>4s<td><div title="265 degrees"style=transform-origin:.5em;transform:rotate(355deg)>➤</div><td>12mph<td>23<td class=red><div title="271 degrees"style=transform-origin:.5em;transform:rotate(361deg)>➜</div><td>⛅<tr><td class=day>10:00<td>4.6ft<td>6s<td><div title="251 degrees"style=transform-origin:.5em;transform:rotate(341deg)>➤</div><td>2.6ft<td>8s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>3.7ft<td>4s<td><div title="260 degrees"style=transform-origin:.5em;transform:rotate(350deg)>➤</div><td>14mph<td>27<td class=red><div title="263 degrees"style=transform-origin:.5em;transform:rotate(353deg)>➜</div><td>🌧</table></div><h2>2024-03-26 - Tuesday</h2><div class=info><ul style=float:left;margin-right:40px><li>First Light<li>05:36<li>Sunrise<li>06:08<li>Sunset<li>18:38<li>Last Light<li>19:10</ul><ul style=float:left><li>1.3m<li>00:12<li>5.5m<li>06:02<li>1.1m<li>12:29<li>5.5m<li>18:18</ul><svg viewbox="0 0 400 80"height=80 width=400 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink><defs></defs><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=93.3 x=0 y=0 /><rect fill=#eee height=80 width=8.900000000000006 x=93.3 y=0 /><rect fill=#eee height=80 width=8.799999999999955 x=310.6 y=0 /><rect fill=grey fill-opacity=0.5 height=80 stroke=none width=80.60000000000002 x=319.4 y=0 /><circle cx=3.3 cy=62.7 fill=black fill-opacity=0 r=8><title>1.3m</title></circle><path d="M3.3,62.7 L3.3,80"stroke=black stroke-width=0.5 /><circle cx=100.6 cy=6.700000000000003 fill=black fill-opacity=0 r=8><title>5.5m</title></circle><path d="M100.6,6.700000000000003 L100.6,80"stroke=black stroke-width=0.5 /><circle cx=208.1 cy=65.3 fill=black fill-opacity=0 r=8><title>1.1m</title></circle><path d="M208.1,65.3 L208.1,80"stroke=black stroke-width=0.5 /><circle cx=305.0 cy=6.700000000000003 fill=black fill-opacity=0 r=8><title>5.5m</title></circle><path d="M305.0,6.700000000000003 L305.0,80"stroke=black stroke-width=0.5 /><circle cx=411.9 cy=16.0 fill=black fill-opacity=0 r=8><title>1.2m</title></circle><path d="M411.9,64.0 L411.9,80"stroke=black stroke-width=0.5 /><path d="M-101.69999999999999,8.0 C-51.69999999999999,8.0,-46.7,62.7,3.3,62.7 S50.599999999999994,6.700000000000003,100.6,6.700000000000003 S158.1,65.3,208.1,65.3 S255.0,6.700000000000003,305.0,6.700000000000003 S361.9,64.0,411.9,64.0"fill=none stroke=black stroke-width=0.5 /><rect fill=none height=80 stroke=grey width=400 x=0 y=0 /></svg></div><div class=outer><table class=fc><thead><tr><th>Time<th colspan=3>Combined<th colspan=3>Primary<th colspan=3>Secondary<th colspan=3>Wind<th><tbody><tr><td class=night>05:00<td>5.5ft<td>9s<td><div title="238 degrees"style=transform-origin:.5em;transform:rotate(328deg)>➤</div><td>5.5ft<td>9s<td><div title="238 degrees"style=transform-origin:.5em;transform:rotate(328deg)>➤</div><td>0.4ft<td>1s<td><div title="208 degrees"style=transform-origin:.5em;transform:rotate(298deg)>➤</div><td>1mph<td>8<td class=green><div title="31 degrees"style=transform-origin:.5em;transform:rotate(121deg)>➜</div><td>☁<tr><td class=twilight>06:00<td>5.5ft<td>9s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>5.5ft<td>9s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>2mph<td>6<td class=green><div title="45 degrees"style=transform-origin:.5em;transform:rotate(135deg)>➜</div><td>☁<tr><td class=day>07:00<td>5.4ft<td>9s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>5.4ft<td>9s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>3mph<td>5<td class=green><div title="45 degrees"style=transform-origin:.5em;transform:rotate(135deg)>➜</div><td>☁<tr><td class=day>08:00<td>5.4ft<td>10s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>5.4ft<td>10s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>2mph<td>5<td class=green><div title="37 degrees"style=transform-origin:.5em;transform:rotate(127deg)>➜</div><td>☁<tr><td class=day>09:00<td>5.4ft<td>10s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>5.4ft<td>10s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>1mph<td>4<td class=green><div title="18 degrees"style=transform-origin:.5em;transform:rotate(108deg)>➜</div><td>☁<tr><td class=day>10:00<td>5.3ft<td>10s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>5.3ft<td>10s<td><div title="237 degrees"style=transform-origin:.5em;transform:rotate(327deg)>➤</div><td>0.0ft<td>1s<td><div title="180 degrees"style=transform-origin:.5em;transform:rotate(270deg)>➤</div><td>1mph<td>6<td class=red><div title="307 degrees"style=transform-origin:.5em;transform:rotate(397deg)>➜</div><td>☁</table></div></main><footer><p><a href=/archive.html>Archive</a><p>Powered by <a href=https://open-meteo.com/>Open-Meteo.com</a>, Generated using ICON Wave forecast from the German Weather Service DWD.</footer>
